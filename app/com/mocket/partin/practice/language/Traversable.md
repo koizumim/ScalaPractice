@@ -21,19 +21,18 @@ Traversableはトレイトだが、ファクトリーメソッドによってイ
  このとき例えば++を呼び出すと、次のようになる。
 
 
-`scala> val t1 = new MyTriple[Int](1,2,3)
-t1: com.mocket.partin.practice.language.MyTriple[Int] = MyTriple(1, 2, 3)
-
-scala> t1 ++ t1
-res1: Traversable[Int] = List(1, 2, 3, 1, 2, 3)`
+`scala> val t1 = new MyTriple[Int](1,2,3)`
+`t1: com.mocket.partin.practice.language.MyTriple[Int] = MyTriple(1, 2, 3)
+`scala> t1 ++ t1`
+`res1: Traversable[Int] = List(1, 2, 3, 1, 2, 3)`
 
 つまり、2つのMyTripleを足し合わせた結果がMyTripleではなくListで返されてしまう。
 これは実際にMyTripleクラスを使うユーザー（が、存在したとして）にとって、自然な振る舞いではないだろう。
 
 同じことはfilterなどのメソッドについてもいえる。
 
-`scala> t1.filter(_ > 1)
- res7: Traversable[Int] = List(2, 3)`
+`scala> t1.filter(_ > 1)`
+`res7: Traversable[Int] = List(2, 3)`
 
  そこで、次のような問いが出てくる。
 
