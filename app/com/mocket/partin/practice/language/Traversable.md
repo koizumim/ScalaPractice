@@ -22,7 +22,7 @@ Traversableはトレイトだが、ファクトリーメソッドによってイ
 
 
 `scala> val t1 = new MyTriple[Int](1,2,3)`
-`t1: com.mocket.partin.practice.language.MyTriple[Int] = MyTriple(1, 2, 3)
+`t1: com.mocket.partin.practice.language.MyTriple[Int] = MyTriple(1, 2, 3)`
 `scala> t1 ++ t1`
 `res1: Traversable[Int] = List(1, 2, 3, 1, 2, 3)`
 
@@ -32,6 +32,7 @@ Traversableはトレイトだが、ファクトリーメソッドによってイ
 同じことはfilterなどのメソッドについてもいえる。
 
 `scala> t1.filter(_ > 1)`
+
 `res7: Traversable[Int] = List(2, 3)`
 
  そこで、次のような問いが出てくる。
