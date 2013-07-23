@@ -11,7 +11,7 @@ Traversableはトレイトだが、ファクトリーメソッドによってイ
 
  これを見ると、TraversableのファクトリーメソッドはListのデフォルト実装によってインスタンス化されていそうな気がする。
 
- ## Traversableの実装
+## Traversableの実装
 
  Traversableの唯一の抽象メソッドはforeachである。
  故に、foreachさえ実装すればTraversableを実装したことになる。
