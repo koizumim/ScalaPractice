@@ -5,8 +5,9 @@ Traversableの1階層下にはIterable, Set, Mapがある。
 
 Traversableはトレイトだが、ファクトリーメソッドによってインスタンス化することができる。
 
-`scala> Traversable(1,2,3)
- res8: Traversable[Int] = List(1, 2, 3)`
+`scala> Traversable(1,2,3)`
+
+`res8: Traversable[Int] = List(1, 2, 3)`
 
  これを見ると、TraversableのファクトリーメソッドはListのデフォルト実装によってインスタンス化されていそうな気がする。
 
@@ -22,8 +23,11 @@ Traversableはトレイトだが、ファクトリーメソッドによってイ
 
 
 `scala> val t1 = new MyTriple[Int](1,2,3)`
+
 `t1: com.mocket.partin.practice.language.MyTriple[Int] = MyTriple(1, 2, 3)`
+
 `scala> t1 ++ t1`
+
 `res1: Traversable[Int] = List(1, 2, 3, 1, 2, 3)`
 
 つまり、2つのMyTripleを足し合わせた結果がMyTripleではなくListで返されてしまう。
